@@ -1,2 +1,76 @@
 @import "variables_and_global";
 @import "typography";
+
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    padding-top: 3em;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: url(../img/illustration-hero-left.svg), url(../img/bg-hero-squiggle.svg), url(../img/illustration-hero-right.svg);
+    background-position: left, center, right;
+    background-repeat: no-repeat;
+    min-height: 100%;
+
+    .container--hero {
+        width: 30%;
+    }
+
+    h1 {
+        margin-bottom: 0.5em;
+    }
+
+    p {
+        margin-bottom: 5em;
+    }
+
+    &__scroll {
+        margin: 0 auto;
+    }
+}
+
+.motivation {
+    padding-bottom: 10em;
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__group {
+        width: 18%;
+
+        &--lower {
+            margin-top: 3.5em;
+        }
+    }
+
+    &__img {
+        background-color: var(--dark-blue);
+        margin-bottom: 2.5em;
+        width: 150px;
+        min-height: 150px;
+        border-radius: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h3 {
+        margin-bottom: 1.5em;
+    }
+}
+
+.pricing {
+    padding: 3em 0;
+}
