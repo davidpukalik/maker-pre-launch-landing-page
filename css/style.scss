@@ -40,7 +40,7 @@
 }
 
 .motivation {
-    margin: 5em 0;
+    padding: 5em 0 7em;
 
     &__flex {
         display: flex;
@@ -72,7 +72,7 @@
 }
 
 .pricing {
-    padding: 3em 0;
+    margin: 5em 0 10em;
 
     .container--pricing {
         width: 50%;
@@ -91,17 +91,36 @@
     &__flex {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     &__box {
         background-color: var(--dark-blue);
-        width: 50%;
+        min-width: 50%;
         margin: 2em;
-        padding: 2em;
+        padding: 3em 2em;
         border-radius: 10px;
+        min-height: 400px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &::before {
+            content: url(../img/icon-free.svg);
+            position: absolute;
+            top: -30px;
+        }
 
         &--hl {
             background-color: var(--light-blue);
+            min-height: 460px;
+
+            &::before {
+                content: url(../img/icon-paid.svg);
+                position: absolute;
+                top: -40px;
+            }
         }
     }
 
@@ -130,9 +149,19 @@
         margin-bottom: 0.3em;
         font-size: 2.5rem;
         font-weight: 800;
+        position: relative;
 
         &--hl {
             color: var(--very-dark-blue);
+
+            &::after {
+                content: '/month';
+                position: absolute;
+                font-size: .9375rem;
+                font-weight: 500;
+                left: 160px;
+                top: 13px;
+            }
         }
     }
 
@@ -152,6 +181,58 @@
 
             &::before {
                 content: url(../img/icon-check.svg);
+            }
+        }
+    }
+}
+
+.footer {
+    background-image: url(../img/bg-footer-squiggle.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 7em 0;
+
+
+    &__flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+
+        h2 {
+            margin-bottom: 1em;
+        }
+
+        form {
+            display: flex;
+            justify-content: space-between;
+            width: 40%;
+        }
+
+        input[name="input__email"] {
+            outline: none;
+            border: none;
+            background-color: var(--dark-blue);
+            color: var(--white);
+            padding: 1em;
+            border-radius: 50px;
+            width: 68%;
+        }
+
+        input[name="input__submit"] {
+            outline: none;
+            border: none;
+            width: 28%;
+            background-color: var(--light-blue);
+            border-radius: 50px;
+            transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--very-dark-blue);
+                border: 2px solid var(--light-blue);
+                color: var(--white);
             }
         }
     }
