@@ -36,28 +36,36 @@
 
       <div class="motivation__flex">
 
-        <div class="motivation__group">
+        <div class="motivation__group motivation__group--right">
           <div class="motivation__img"><img src="img/illustration-passions.svg" alt="Passion"></div>
-          <h3>Indulge your passions</h3>
-          <p>Your passions shouldn't be just for the weekend. Earn a living doing what you love.</p>
+          <div class="motivation__intro">
+            <h3>Indulge your passions</h3>
+            <p>Your passions shouldn't be just for the weekend. Earn a living doing what you love.</p>
+          </div>
         </div>
 
-        <div class="motivation__group motivation__group--lower">
+        <div class="motivation__group motivation__group--lower motivation__group--left">
           <div class="motivation__img"><img src="img/illustration-financial-freedom.svg" alt="Financial Freedom"></div>
-          <h3>Gain financial freedom</h3>
-          <p>Start making money work for you. There’s nothing quite like earning while you sleep.</p>
+          <div class="motivation__intro">
+            <h3>Gain financial freedom</h3>
+            <p>Start making money work for you. There’s nothing quite like earning while you sleep.</p>
+          </div>
         </div>
 
-        <div class="motivation__group">
+        <div class="motivation__group motivation__group--right">
           <div class="motivation__img"><img src="img/illustration-lifestyle.svg" alt="Lifestyle"></div>
-          <h3>Choose your lifestyle</h3>
-          <p>Own your daily schedule. Fancy a lie-in? Go for it! Take charge of your week.</p>
+          <div class="motivation__intro">
+            <h3>Choose your lifestyle</h3>
+            <p>Own your daily schedule. Fancy a lie-in? Go for it! Take charge of your week.</p>
+          </div>
         </div>
 
-        <div class="motivation__group motivation__group--lower">
+        <div class="motivation__group motivation__group--lower motivation__group--left">
           <div class="motivation__img"><img src="img/illustration-work-anywhere.svg" alt="Work Anywhere"></div>
-          <h3>Work from anywhere</h3>
-          <p>Selling online means not being pinned down. Want to work AND travel? Go for it!</p>
+          <div class="motivation__intro">
+            <h3>Work from anywhere</h3>
+            <p>Selling online means not being pinned down. Want to work AND travel? Go for it!</p>
+          </div>
         </div>
 
       </div>
@@ -109,16 +117,17 @@
     <div class="container">
       <div class="footer__flex">
         <h2>Get notified when we launch</h2>
-        <form action="">
-          <input type="email" name="input__email" id="" placeholder="Email address">
+        <form action="" id="form">
+          <input type="email" name="input__email" id="input__email" placeholder="Email address">
           <input type="submit" name="input__submit" value="Get notified">
+
         </form>
       </div>
+      <p id="input__error" class="input__error"></p>
     </div>
   </footer>
 
-  </div>
-
+  <script src="main.js"></script>
 </body>
 
 </html>
