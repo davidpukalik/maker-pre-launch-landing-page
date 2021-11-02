@@ -2,14 +2,11 @@
 @import "typography";
 
 .main {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    min-height: 100vh;
 }
 
 .header {
-    padding-top: 3em;
+    padding: 3em 0;
 }
 
 .hero {
@@ -20,7 +17,7 @@
     background: url(../img/illustration-hero-left.svg), url(../img/bg-hero-squiggle.svg), url(../img/illustration-hero-right.svg);
     background-position: left, center, right;
     background-repeat: no-repeat;
-    min-height: 100%;
+    min-height: 70vh;
 
     .container--hero {
         width: 30%;
@@ -36,6 +33,28 @@
 
     &__scroll {
         margin: 0 auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .main {
+        min-height: 40vh;
+    }
+
+    .hero {
+        background-size: 30%;
+        min-height: 30vh;
+    }
+
+    .container--hero {
+        transform: scale(0.9);
+        width: 50% !important;
+    }
+
+    header {
+        img {
+            transform: scale(0.9);
+        }
     }
 }
 
@@ -70,6 +89,43 @@
         margin-bottom: 1.5em;
     }
 }
+
+@media (max-width: 1024px) {
+    .motivation {
+        transform: scale(0.9);
+        padding: 2em 0 0 0;
+
+        &__flex {
+            flex-direction: column;
+        }
+
+        &__group {
+            width: 80%;
+            margin: 0 auto 2.5em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &--left {
+                margin-left: 2em;
+            }
+
+            &--right {
+                margin-right: 2em;
+            }
+        }
+
+        &__img {
+            margin-bottom: 0;
+        }
+
+        &__intro {
+            width: 70%;
+            margin-left: 2em;
+        }
+    }
+}
+
 
 .pricing {
     margin: 5em 0 10em;
@@ -186,10 +242,34 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .pricing {
+        margin: 0;
+        transform: scale(0.9);
+
+        .container--pricing {
+            width: 80%;
+        }
+
+        &__intro {
+            width: 80%;
+        }
+
+        &__flex {
+            flex-direction: column;
+        }
+
+
+
+
+    }
+}
+
 .footer {
     background-image: url(../img/bg-footer-squiggle.svg);
     background-repeat: no-repeat;
     background-size: 100%;
+    background-position-y: 50px;
     padding: 7em 0;
 
 
@@ -202,12 +282,15 @@
 
         h2 {
             margin-bottom: 1em;
+            width: 60%;
+            text-align: center;
         }
 
         form {
             display: flex;
             justify-content: space-between;
-            width: 40%;
+            min-width: 40%;
+            height: 40px;
         }
 
         input[name="input__email"] {
@@ -215,9 +298,15 @@
             border: none;
             background-color: var(--dark-blue);
             color: var(--white);
-            padding: 1em;
+            padding: 1em 2em;
             border-radius: 50px;
             width: 68%;
+            font-weight: 800;
+
+            &.error {
+                //TODO JS
+                border: 2px solid var(--red);
+            }
         }
 
         input[name="input__submit"] {
@@ -234,6 +323,26 @@
                 border: 2px solid var(--light-blue);
                 color: var(--white);
             }
+        }
+    }
+
+    .input__error {
+        width: 40%;
+        display: flex;
+        margin: 0.7em auto;
+        padding-left: 1em;
+        font-size: .75rem;
+        color: var(--red);
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        background-size: 100%;
+        background-position-y: 120px;
+
+        form {
+            min-width: 60%;
         }
     }
 }
