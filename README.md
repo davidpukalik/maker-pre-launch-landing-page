@@ -4,4 +4,4 @@ This is a solution to the [Maker pre-launch landing page challenge hub on Fronte
  <br><br>
 ## Screenshot
 
-<img src="img/screenshot.png">
+<img src="img/screenshot_maker.png">
