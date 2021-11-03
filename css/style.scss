@@ -317,6 +317,13 @@
     }
 }
 
+//700px
+@media (max-width: 43.75rem) {
+    .container--pricing {
+        width: 100% !important;
+    }
+}
+
 .footer {
     background-image: url(../img/bg-footer-squiggle.svg);
     background-repeat: no-repeat;
